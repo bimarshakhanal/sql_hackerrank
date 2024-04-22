@@ -43,6 +43,34 @@
   select city, length(city) from station order by 2 asc,city asc limit 1;
   select city, length(city) from station order by 2 desc,city asc limit 1;
   ```
+* Weather Observation Station 6  
+  ```
+  select city from station where left(city,1) in ('a','e','i','o','u');
+  ```
+* Weather Observation Station 7  
+  ```
+  select distinct city  from station where right(city,1) in ('a','e','i','o','u'); 
+  ```
+* Weather Observation Station 8  
+  ```
+  select city from station where right(city,1) in ('a','e','i','o','u') and left(city,1) in ('a','e','i','o','u');
+  ```
+* Weather Observation Station 9  
+  ```
+  select distinct city from station where left(city,1) not in ('a','e','i','o','u');
+  ```
+* Weather Observation Station 10  
+  ```
+  select distinct city from station where right(city,1) not in ('a','e','i','o','u');
+  ```
+* Weather Observation Station 11
+  ```
+  select distinct city from station where left(city,1) not in ('a','e','i','o','u') or right(city,1) not in ('a','e','i','o','u');
+  ```
+* Weather Observation Station 12
+  ```
+  select distinct city from station where left(city,1) not in ('a','e','i','o','u') and right(city,1) not in ('a','e','i','o','u');
+  ```
 * Higher than 75 marks  
   ```
   select name from students where marks>75 order by right(name, 3) , ID;
